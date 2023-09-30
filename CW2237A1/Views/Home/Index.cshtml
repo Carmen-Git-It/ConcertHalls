@@ -1,33 +1,39 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Assignment #1 - Carmen Whitton";
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    <section class="row" aria-labelledby="title">
+        <h1 id="title">@ViewBag.Title</h1>
+        <p class="lead">This application is designed to manage concert venues via ASP.NET forms in order to learn about ASP.NET MVC.</p>
     </section>
 
     <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
+        <section class="col-md-4" aria-labelledby="whatILearnedTitle">
+            <h2 id="whatILearnedTitle">What I Learned</h2>
             <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
+                In making this application, I learned the fundamentals of ASP.NET MVC, including forms, C#, and VS Development.
+                The amount of help that Visual Studio is able to offer as an IDE is astounding for ASP.NET MVC, indicating the
+                deep integration between the two. <br /><br />Further, I found that cshtml was a very functional format, and that Razor is
+                more helpful than I thought it would be. It still feels rather limited, but given the tight control over data
+                that MVC requires, it has not yet proven to be an issue.<br /><br />I have found C# to be relatively simple to pick up after
+                developing in Java and C++, but it still has some surprises.
             </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
         </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <section class="col-md-4" aria-labelledby="strugglesTitle">
+            <h2 id="strugglesTitle">What I Struggled With</h2>
+            <p>
+                I primarily struggled with figuring out how things fit together between the ViewModel, Design Model, Manager, Controller, and View.
+                <br /><br />
+                For example, I had isses with enforcing validation in the edit view because I failed to realize that the ModelState only referred to
+                the model POSTed into the route, and not the original ViewModel that was used to generate the form.
+                <br /><br />
+                I also had some difficulties with some very basic things like customizing the ViewBag contents, as I simply glazed over the annotations
+                at the top of the page.
+                <br /><br />
+                Overall not too many issues, other than going over everything with a fine-toothed comb to double and triple check for bugs and style
+                issues.
+            </p>
         </section>
     </div>
 </main>
