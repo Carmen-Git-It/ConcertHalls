@@ -28,13 +28,13 @@ namespace CW2237A1.Controllers
             return View(v);
         }
 
-        // GET: Customers/Create
+        // GET: Venues/Create
         public ActionResult Create()
         {
             return View(new VenueAddViewModel());
         }
 
-        // POST: Customers/Create
+        // POST: Venues/Create
         [HttpPost]
         public ActionResult Create(VenueAddViewModel venue) { 
             if (!ModelState.IsValid)
@@ -62,6 +62,7 @@ namespace CW2237A1.Controllers
             }
         }
 
+        // GET: Venues/Edit
         public ActionResult Edit(int? id)
         {
             var v = m.VenueGetById(id.GetValueOrDefault());
@@ -76,6 +77,7 @@ namespace CW2237A1.Controllers
             return View(formVenue);
         }
 
+        // POST: Venues/Edit
         [HttpPost]
         public ActionResult Edit(int? id, VenueEditViewModel venue)
         {
@@ -100,6 +102,8 @@ namespace CW2237A1.Controllers
 
             return RedirectToAction("Details", new { id = venue.VenueId });
         }
+
+        // GET: Venues/Delete
         public ActionResult Delete(int? id)
         {
             var v = m.VenueGetById(id.GetValueOrDefault());
@@ -109,6 +113,15 @@ namespace CW2237A1.Controllers
             }
 
             return View(v);
+        }
+
+        // POST: Venues/Delete
+        [HttpPost]
+        public ActionResult Delete(int? id, FormCollection collection)
+        {
+            m.VenueDelete(id.GetValueOrDefault());
+
+            return RedirectToAction("Index");
         }
     }
 }

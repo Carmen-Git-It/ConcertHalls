@@ -212,6 +212,7 @@
     <Content Include="Views\Venues\Details.cshtml" />
     <Content Include="Views\Venues\Edit.cshtml" />
     <Content Include="Views\Venues\Delete.cshtml" />
+    <Content Include="Views\Venues\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

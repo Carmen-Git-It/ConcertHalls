@@ -46,7 +46,7 @@ namespace CW2237A1.Models
         public string Website { get; set; }
 
         [Display(Name = "Date Opened")]
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? OpenDate { get; set; }
 
